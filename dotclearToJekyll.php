@@ -25,7 +25,6 @@ if ( ( $handleRead = fopen ( 'dataInput/data.csv' , 'r' ) ) !== FALSE )
             . "title: " . str_replace ( '\\' , '' , $data [ 1 ] ) . "\n"
             . "---\n"
             . "\n"
-            . '#' . str_replace ( '\\' , '' , $data [ 1 ] ) . "\n"
             . str_replace ( '\\' , '' , str_replace ( '\n' , '' , $md->parseString ( $data [ 5 ] ) ) ) ;
 
         $handleWrite = fopen ( $filePath . '/' . $fileName , 'x+' ) ;
